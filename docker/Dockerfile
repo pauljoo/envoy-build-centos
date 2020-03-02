@@ -1,4 +1,4 @@
-FROM envoyproxy/envoy-build-centos:83ce22dd47a73b4f03f6787b089e11f758c83484
+FROM envoyproxy/envoy-build-centos:b6c2bae5716a289fd68c45a6e5bc16979dbe69c5
 
 COPY ./envoy/ /source
 
@@ -11,4 +11,3 @@ RUN usermod -a -G pcap envoybuild
 USER envoybuild
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
-~                                                  
